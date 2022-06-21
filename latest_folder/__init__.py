@@ -19,8 +19,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             folders.append(path.name.replace(folder_path.strip("/"), "").lstrip("/").rsplit("/", 1)[0])
             folders.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"), reverse=True)
             latestFolder = folders[0]
-        return latestFolder
     except Exception as e:
         print(e)
     #End Start latestFolder script
-    return func.HttpResponse("func complete", status_code=200)
+    return func.HttpResponse(latestFolder, status_code=200)
