@@ -20,6 +20,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             folders.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"), reverse=True)
             latestFolder = folders[0]
     except Exception as e:
+        latestFolder = 'failure'
         print(e)
     #End Start latestFolder script
-    return func.HttpResponse(latestFolder, status_code=200)
+    return func.HttpResponse(f"{latestFolder}", mimetype='text/html', status_code=200)
