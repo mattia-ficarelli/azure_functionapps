@@ -54,10 +54,10 @@ stages:
         rootFolderOrFile: '$(workingDirectory)'
         includeRootFolder: false
         archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/function-app/$(Build.BuildId).zip
         replaceExistingArchive: true
 
-    - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    - publish: $(Build.ArtifactStagingDirectory)/function-app/$(Build.BuildId).zip
       artifact: drop
 
 - stage: Deploy
