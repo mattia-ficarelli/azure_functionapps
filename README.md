@@ -1,2 +1,3 @@
 # azure_functionapps
-Space to develop Azure Functions for use in ETL
+
+Personal space to develop Azure Functions for use in Azure Data Factory ETL pipelines. DevOps .yaml pipeline used to push and deploy functions to Azure Enviroments. 
