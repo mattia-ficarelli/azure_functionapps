@@ -9,10 +9,10 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'NHSXAnalytics'
+  azureSubscription: 'cae16a33-271b-4c61-9ea9-cd3343d3e13b'
 
   # Function app name
-  functionAppName: 'nhsxazurefunctions-dev'
+  functionAppName: 'devFunctionApps'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
