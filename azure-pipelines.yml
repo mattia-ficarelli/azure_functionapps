@@ -1,3 +1,4 @@
+
 # Python Function App to Linux on Azure
 # Build a Python function app and deploy it to Azure as a Linux function app.
 # Add steps that analyze code, save build artifacts, deploy, and more:
@@ -8,10 +9,10 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'cae16a33-271b-4c61-9ea9-cd3343d3e13b'
+  azureSubscription: 'NHSXAnalytics'
 
   # Function app name
-  functionAppName: 'devFunctionApps'
+  functionAppName: 'nhsxazurefunctions-dev'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
