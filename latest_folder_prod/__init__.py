@@ -7,8 +7,8 @@ import azure.functions as func
 def main(req: func.HttpRequest) -> func.HttpResponse:
     req_body = req.get_json()
     folder_path = "/"+ req_body.get("sourcePath")
-    file_system= req_body.get("fileSystem")
-    connection_string = os.getenv("DATALAKE_CONNECTION_STRING")
+    file_system= req_body.get("fileSystem_prod")
+    connection_string = os.getenv("DATALAKE_CONNECTION_STRING_PROD")
     service_client = DataLakeServiceClient.from_connection_string(connection_string)
     #Start latestFolder script
     try:
